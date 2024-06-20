@@ -1,0 +1,463 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  margin-bottom: 50px;
+}
+
+/* header */
+.headerWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 45px 100px 50px 100px;
+  width: 1240px;
+}
+.headerWrapper__logoWrapper {
+}
+.headerWrapper__navWrapper {
+  gap: 57px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 142.6%;
+  color: #000000;
+}
+.headerWrapper__navWrapper > a {
+  padding-left: 57px;
+  color: #000000;
+}
+
+/* gallery */
+.homeGallery {
+  display: flex;
+  flex-direction: column;
+  width: 1240px;
+  margin: 0px 100px 50px 100px;
+  border-radius: 25px;
+}
+
+.homeGallery__banner {
+  width: 1240px;
+  height: 223px;
+  display: flex;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 25px;
+  margin-bottom: 43px;
+  overflow: hidden;
+}
+
+.homeGallery__banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* opacity amount */
+  border-radius: 25px;
+}
+
+.homeGallery__banner_title {
+  font-size: 48px;
+  line-height: 142.6%;
+  color: #ffffff;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  position: absolute;
+  width: 733px;
+  height: 68px;
+  left: calc(50% - 733px / 2 + 19.5px);
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  z-index: 1;
+}
+.homeGallery__gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 340px);
+  grid-template-rows: repeat(2, 340px);
+  grid-column-gap: 60px;
+  grid-row-gap: 50px;
+  height: 829px;
+  overflow: scroll;
+  scrollbar-width: none;
+  padding: 56px 50px 43px 50px;
+  background: #f7f7f7;
+  border-radius: 25px;
+}
+.card {
+  height: 340px;
+  width: 340px;
+  border-radius: 10px;
+}
+.card > a > img {
+  height: 340px;
+  width: 340px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.card > a > h2 {
+  display: flex;
+  position: relative;
+  font-size: 18px;
+  line-height: 142.6%;
+  align-items: flex-end;
+  color: #ffffff;
+  bottom: 23%;
+  left: 0%;
+  padding: 0px 0px 20px 20px;
+  font-weight: 700;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+/* footer */
+.footerWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #000000;
+  color: white;
+  width: 100%;
+  align-items: center;
+  height: 209px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 142.6%;
+}
+.footerWrapper__logoWrapper {
+  padding-top: 66px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.footerWrapper > p {
+  padding-top: 28px;
+  margin-bottom: 29px;
+}
+
+/* Location */
+
+/* Location slider */
+
+.locationSlider {
+  display: flex;
+  height: 415px;
+  width: 1240px;
+}
+.locationSliderImage {
+  display: flex;
+  border-radius: 25px;
+  object-fit: cover;
+  width: 1240px;
+  height: 415px;
+}
+.leftArrow {
+  position: absolute;
+  margin-left: 1.883%;
+  margin-top: 11%;
+  width: 46.68px;
+  height: 79.2px;
+  border: none;
+  background: cyan;
+}
+.rightArrow {
+  position: absolute;
+  margin-left: 80.5%;
+  margin-top: 11%;
+  width: 46.68px;
+  height: 79.2px;
+  border: none;
+  background: red;
+}
+.locationSliderNumber {
+  display: flex;
+  position: absolute;
+  bottom: 57%;
+  left: 50%;
+  text-align: center;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 142.6%;
+  color: #ffffff;
+  background-color: blueviolet;
+}
+
+/* Location details */
+
+.locationDetailsWrapper {
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+  width: 1240px;
+  height: 126px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+.locationTitleWrapper {
+  width: 86.532%;
+  height: 77px;
+  margin-bottom: 20px;
+}
+.locationTitle {
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 142.6%;
+  color: #ff6060;
+}
+.locationSubtitle {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 142.6%;
+  color: #000000;
+}
+.hostWrapper {
+  display: flex;
+  width: 167px;
+  height: 64px;
+  text-align: right;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.hostWrapper > img {
+  width: 64px;
+  height: 64px;
+  background: #c4c4c4;
+  border-radius: 50%;
+}
+.hostName {
+  width: min-content;
+  height: 52px;
+  font-size: 18px;
+  line-height: 142.6%;
+  color: #ff6060;
+}
+.locationTags {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  font-size: 14px;
+  line-height: 142.6%;
+  width: 84.193%;
+}
+.locationTags > div {
+  display: flex;
+  min-width: 115px;
+  height: 25px;
+  border-radius: 10px;
+  color: #ffffff;
+  background: #ff6060;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-right: 10px;
+}
+.locationTag > p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 3px 20px 2px 20px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 142.6%;
+}
+.locationRating {
+  display: flex;
+  width: 15.806%;
+  padding-bottom: 7px;
+  column-gap: 12px;
+  justify-content: flex-end;
+}
+
+/* Location collapse */
+
+/* .galleryCollapseButton > img {
+  transition: transform 0.5s ease;
+  padding: 10px 20px 10px 0px;
+}
+
+.galleryCollapseButton > img.rotated {
+  transform: rotate(180deg);
+}
+
+.galleryCollapseDescriptionText,
+.galleryCollapseEquipmentText {
+  display: none;
+  transition: all 1s ease;
+}
+
+.galleryCollapseDescriptionText.show,
+.galleryCollapseEquipmentText.show {
+  display: flex;
+}
+.galleryCollapseWrapper {
+  display: flex;
+  flex-direction: row;
+}
+.galleryCollapseButton {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: #ff6060;
+  color: #ff6060;
+}
+.galleryCollapseDescription {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 582px;
+  height: 52px;
+  background: #ff6060;
+  border-radius: 5px;
+}
+.galleryCollapseDescription h2 {
+  padding: 10px 0px 10px 10px;
+  color: white;
+}
+.galleryCollapseDescriptionText {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 142.6%;
+  height: 156px;
+  color: #ff6060;
+}
+.galleryCollapseEquipment {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 582px;
+  height: 52px;
+  background: #ff6060;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  margin-left: 76px;
+}
+.galleryCollapseEquipment h2 {
+  padding: 10px 0px 10px 10px;
+  color: white;
+} */
+
+/*/////////////////////////////**********************************************************/
+
+/* General button styling */
+.galleryCollapseButton {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  padding: 10px 20px 10px 10px;
+}
+
+/* Image within the button */
+.galleryCollapseButton > img {
+  transition: transform 0.5s ease;
+}
+
+/* Rotate the image when the button is clicked */
+.galleryCollapseButton > img.rotated {
+  transform: rotate(180deg);
+}
+
+/* Hide the text initially */
+.galleryCollapseDescriptionText,
+.galleryCollapseEquipmentText {
+  display: none;
+  padding: 20px;
+  width: 534px;
+  background: rgba(247, 247, 247, 0.45);
+  border-radius: 0 0 5px 5px;
+  margin-top: 0; /* Adjusted to match the design */
+  font-family: 'Montserrat';
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  color: #000000;
+}
+
+.galleryCollapseEquipmentText.show > p {
+  font-family: 'Montserrat';
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  color: #000000;
+}
+
+/* Show the text when the section is expanded */
+.galleryCollapseDescriptionText.show,
+.galleryCollapseEquipmentText.show {
+  display: block;
+}
+
+/* Wrapper for the collapsible sections */
+.galleryCollapseWrapper {
+  display: flex;
+  flex-direction: row;
+  left: 20px;
+  top: 20px;
+}
+
+/* Description section styling */
+.galleryCollapseDescription,
+.galleryCollapseEquipment {
+  display: flex;
+  flex-direction: column;
+  width: 582px;
+  background: rgba(247, 247, 247, 0.45);
+  border-radius: 10px 10px 5px 5px;
+  position: relative;
+}
+.galleryCollapseEquipment {
+  padding-left: 76px;
+}
+/* Section header styling */
+.galleryCollapseSectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: #ff6060;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+/* Section title styling */
+.galleryCollapseSectionHeader h2 {
+  font-family: 'Montserrat';
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: #ffffff;
+  margin: 0;
+  padding: 10px 20px 10px 10px;
+}
+
+/* Button positioning within the section header */
+.galleryCollapseSectionHeader .galleryCollapseButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

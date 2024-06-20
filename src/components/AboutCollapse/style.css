@@ -1,0 +1,10 @@
+/* style.css */
+.aboutCollapseText {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+}
+
+.show {
+  max-height: 200px; /* Adjust as needed */
+}
