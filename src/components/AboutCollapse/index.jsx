@@ -22,31 +22,43 @@ export default function AboutCollapse() {
   return (
     <div className="aboutCollapseWrapper">
       <div className="aboutCollapseSection">
-        <h2>Fiabilité</h2>
-        <button
-          onClick={() => toggleVisibility('reliability')}
-          className="aboutCollapseButton"
-        >
-          <img src={CollapseButton} alt="CollapseButton" />
-        </button>
+        <h2>
+          Fiabilité
+          <button
+            onClick={() => toggleVisibility('reliability')}
+            className="aboutCollapseButton"
+          >
+            <img
+              src={CollapseButton}
+              alt="CollapseButton"
+              className={visibleSections.reliability ? 'rotated' : ''}
+            />
+          </button>
+        </h2>
         <p
           className={`aboutCollapseText ${
             visibleSections.reliability ? 'show' : ''
           }`}
         >
-          Les annonces postés sur Kasa garantissent une fiabilité totale. Les
+          Les annonces postées sur Kasa garantissent une fiabilité totale. Les
           photos sont conformes aux logements, et toutes les informations sont
           régulièrement vérifiées par nos équipes.
         </p>
       </div>
       <div className="aboutCollapseSection">
-        <h2>Respect</h2>
-        <button
-          onClick={() => toggleVisibility('respect')}
-          className="aboutCollapseButton"
-        >
-          <img src={CollapseButton} alt="CollapseButton" />
-        </button>
+        <h2>
+          Respect
+          <button
+            onClick={() => toggleVisibility('respect')}
+            className="aboutCollapseButton"
+          >
+            <img
+              src={CollapseButton}
+              alt="CollapseButton"
+              className={visibleSections.respect ? 'rotated' : ''}
+            />
+          </button>
+        </h2>
         <p
           className={`aboutCollapseText ${
             visibleSections.respect ? 'show' : ''
@@ -58,13 +70,19 @@ export default function AboutCollapse() {
         </p>
       </div>
       <div className="aboutCollapseSection">
-        <h2>Service</h2>
-        <button
-          onClick={() => toggleVisibility('service')}
-          className="aboutCollapseButton"
-        >
-          <img src={CollapseButton} alt="CollapseButton" />
-        </button>
+        <h2>
+          Service
+          <button
+            onClick={() => toggleVisibility('service')}
+            className="aboutCollapseButton"
+          >
+            <img
+              src={CollapseButton}
+              alt="CollapseButton"
+              className={visibleSections.service ? 'rotated' : ''}
+            />
+          </button>
+        </h2>
         <p
           className={`aboutCollapseText ${
             visibleSections.service ? 'show' : ''
@@ -76,13 +94,19 @@ export default function AboutCollapse() {
         </p>
       </div>
       <div className="aboutCollapseSection">
-        <h2>Sécurité</h2>
-        <button
-          onClick={() => toggleVisibility('security')}
-          className="aboutCollapseButton"
-        >
-          <img src={CollapseButton} alt="CollapseButton" />
-        </button>
+        <h2>
+          Sécurité
+          <button
+            onClick={() => toggleVisibility('security')}
+            className="aboutCollapseButton"
+          >
+            <img
+              src={CollapseButton}
+              alt="CollapseButton"
+              className={visibleSections.security ? 'rotated' : ''}
+            />
+          </button>
+        </h2>
         <p
           className={`aboutCollapseText ${
             visibleSections.security ? 'show' : ''

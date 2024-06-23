@@ -288,78 +288,6 @@
   justify-content: flex-end;
 }
 
-/* Location collapse */
-
-/* .galleryCollapseButton > img {
-  transition: transform 0.5s ease;
-  padding: 10px 20px 10px 0px;
-}
-
-.galleryCollapseButton > img.rotated {
-  transform: rotate(180deg);
-}
-
-.galleryCollapseDescriptionText,
-.galleryCollapseEquipmentText {
-  display: none;
-  transition: all 1s ease;
-}
-
-.galleryCollapseDescriptionText.show,
-.galleryCollapseEquipmentText.show {
-  display: flex;
-}
-.galleryCollapseWrapper {
-  display: flex;
-  flex-direction: row;
-}
-.galleryCollapseButton {
-  width: 32px;
-  height: 32px;
-  border: none;
-  background: #ff6060;
-  color: #ff6060;
-}
-.galleryCollapseDescription {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 582px;
-  height: 52px;
-  background: #ff6060;
-  border-radius: 5px;
-}
-.galleryCollapseDescription h2 {
-  padding: 10px 0px 10px 10px;
-  color: white;
-}
-.galleryCollapseDescriptionText {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 142.6%;
-  height: 156px;
-  color: #ff6060;
-}
-.galleryCollapseEquipment {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  width: 582px;
-  height: 52px;
-  background: #ff6060;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 5px;
-  margin-left: 76px;
-}
-.galleryCollapseEquipment h2 {
-  padding: 10px 0px 10px 10px;
-  color: white;
-} */
-
-/*/////////////////////////////**********************************************************/
-
 /* General button styling */
 .galleryCollapseButton {
   width: 32px;
@@ -379,7 +307,7 @@
 
 /* Rotate the image when the button is clicked */
 .galleryCollapseButton > img.rotated {
-  transform: rotate(180deg);
+  transform: rotate(-180deg);
 }
 
 /* Hide the text initially */
@@ -460,4 +388,116 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* ********************About***************** */
+
+.about {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1240px;
+  margin: 0px 100px 38px 100px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* banner img */
+.aboutImg {
+  width: 1240px;
+  height: 223px;
+  display: flex;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 25px;
+  margin-bottom: 43px;
+  overflow: hidden;
+}
+
+.aboutImg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* opacity amount */
+  border-radius: 25px;
+}
+
+/* General button styling */
+.aboutCollapseButton {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  padding: 10px 20px 10px 10px;
+}
+
+/* Image within the button */
+.aboutCollapseButton > img {
+  transition: transform 0.5s ease;
+}
+
+/* Rotate the image when the button is clicked */
+.aboutCollapseButton > img.rotated {
+  transform: rotate(-180deg);
+}
+
+/* Hide the text initially */
+.aboutCollapseText {
+  display: none;
+  padding: 20px;
+  width: 534px;
+  background: rgba(247, 247, 247, 0.45);
+  border-radius: 0 0 5px 5px;
+  margin-top: 0;
+  font-family: 'Montserrat';
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  color: #000000;
+}
+
+/* Show the text when the section is expanded */
+.aboutCollapseText.show {
+  display: block;
+}
+
+/* Wrapper for the collapsible sections */
+.aboutCollapseWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 71.041%;
+}
+
+/* Section styling */
+.aboutCollapseSection {
+  max-width: 1023px;
+  position: relative;
+  border-radius: 5px;
+  background: rgba(247, 247, 247, 0.45);
+  overflow: hidden;
+}
+
+/* Section header styling */
+.aboutCollapseSection > h2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Montserrat';
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: #ffffff;
+  margin: 0;
+  padding: 10px 20px;
+  background: #ff6060;
+  border-radius: 5px 5px 0 0;
 }
