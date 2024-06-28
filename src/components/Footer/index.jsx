@@ -6,7 +6,7 @@ import LogoADesktopFooter from '../../assets/images/logoADesktopFooter.svg';
 export default function Footer() {
   return (
     <div className="footerWrapper">
-      <div className="footerWrapper__logoWrapper">
+      <div className="footerWrapper__destopLogoWrapper">
         <img src={LogoKdesktopFooter} alt="logoKasa" />
         <img src={LogoMaisonDesktopFooter} alt="logoKasa" />
         <img src={LogoSDesktopFooter} alt="logoKasa" />

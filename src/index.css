@@ -3,7 +3,6 @@
   padding: 0;
   font-family: 'Montserrat';
   font-style: normal;
-  font-weight: 700;
   text-decoration: none;
 }
 
@@ -12,6 +11,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  max-height: min-content;
 }
 
 .main {
@@ -27,7 +27,14 @@
   margin: 45px 100px 50px 100px;
   width: 1240px;
 }
-.headerWrapper__logoWrapper {
+
+.headerWrapper__desktopLogoWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.headerWrapper__mobileLogoWrapper {
+  display: none;
 }
 .headerWrapper__navWrapper {
   gap: 57px;
@@ -102,11 +109,14 @@
   border-radius: 25px;
 }
 .card {
+  display: flex;
+  position: relative;
   height: 340px;
   width: 340px;
   border-radius: 10px;
 }
 .card > a > img {
+  position: absolute;
   height: 340px;
   width: 340px;
   object-fit: cover;
@@ -114,12 +124,12 @@
 }
 .card > a > h2 {
   display: flex;
-  position: relative;
+  position: absolute;
   font-size: 18px;
   line-height: 142.6%;
   align-items: flex-end;
   color: #ffffff;
-  bottom: 23%;
+  bottom: 0%;
   left: 0%;
   padding: 0px 0px 20px 20px;
   font-weight: 700;
@@ -157,6 +167,7 @@
 /* Location slider */
 
 .locationSlider {
+  position: relative;
   display: flex;
   height: 415px;
   width: 1240px;
@@ -170,8 +181,8 @@
 }
 .leftArrow {
   position: absolute;
-  margin-left: 1.883%;
-  margin-top: 11%;
+  left: 0;
+  top: 40%;
   width: 46.68px;
   height: 79.2px;
   border: none;
@@ -179,8 +190,8 @@
 }
 .rightArrow {
   position: absolute;
-  margin-left: 80.5%;
-  margin-top: 11%;
+  top: 40%;
+  right: 0;
   width: 46.68px;
   height: 79.2px;
   border: none;
@@ -479,6 +490,7 @@
 
 /* Section styling */
 .aboutCollapseSection {
+  height: ;
   max-width: 1023px;
   position: relative;
   border-radius: 5px;
@@ -500,4 +512,607 @@
   padding: 10px 20px;
   background: #ff6060;
   border-radius: 5px 5px 0 0;
+}
+
+/*             errorPage            */
+
+.errorPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 89px;
+}
+.errorPage > h1 {
+  display: flex;
+  margin: 0px 321.5px 139px 321.5px;
+  font-weight: 700;
+  font-size: 288px;
+  color: #ff6060;
+}
+.errorPage > h2 {
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 142.6%;
+  color: #ff6060;
+  margin-bottom: 139px;
+}
+.errorPage > a {
+  text-decoration-line: underline;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 142.6%;
+  color: #000000;
+  margin-bottom: 139px;
+}
+
+/******************* width: >1023px ************************/
+
+@media (max-width: 1023px) {
+  .main {
+    margin-bottom: 2.131%;
+  }
+
+  /* header */
+  .headerWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5.333% 5.333% 27px 5.333%;
+    width: 100%;
+  }
+  .headerWrapper__desktopLogoWrapper {
+    display: none;
+  }
+  .headerWrapper__mobileLogoWrapper {
+    display: flex;
+    padding-left: 20px;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  .headerWrapper__navWrapper {
+    padding-right: 20px;
+  }
+  .headerWrapper__navWrapper > a {
+    padding-left: 26px;
+    color: #000000;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 142.6%;
+    text-transform: uppercase;
+  }
+
+  /* gallery */
+  .homeGallery {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0px 0px 27px 0px;
+  }
+
+  .homeGallery__banner {
+    width: 100%;
+    height: 111px;
+    display: flex;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 43px;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+
+  .homeGallery__banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* opacity amount */
+    border-radius: 10px;
+  }
+
+  .homeGallery__banner_title {
+    font-size: 24px;
+    line-height: 1;
+    color: #ffffff;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    position: absolute;
+    width: 193px;
+    height: 48px;
+    left: 0%;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: left;
+    z-index: 1;
+    padding-left: 16px;
+    padding-top: 31px;
+    padding-bottom: 32px;
+  }
+  .homeGallery__gallery {
+    display: grid;
+    grid-template-columns: repeat(1, 100%);
+    grid-template-rows: repeat(3, 255px);
+    grid-column-gap: 0px;
+    grid-row-gap: 20px;
+    width: 100%;
+    height: 805px;
+    overflow: scroll;
+    scrollbar-width: none;
+    padding: 0px 0px 0px 0px;
+    background: #ffffff;
+    border-radius: 10px;
+  }
+  .card {
+    display: flex;
+    position: relative;
+    height: 255px;
+    width: 335px;
+    border-radius: 10px;
+  }
+  .card > a > img {
+    position: absolute;
+    height: 255px;
+    width: 335px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  .card > a > h2 {
+    display: flex;
+    position: absolute;
+    font-size: 18px;
+    line-height: 142.6%;
+    align-items: flex-end;
+    color: #ffffff;
+    bottom: 0%;
+    left: 0%;
+    padding: 0px 0px 20px 20px;
+    font-weight: 700;
+    font-size: 18px;
+    text-decoration: none;
+  }
+
+  /* footer */
+  .footerWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #000000;
+    color: white;
+    width: 100%;
+    align-items: center;
+    height: 209px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 142.6%;
+  }
+  .footerWrapper__desktopLogoWrapper {
+    padding-top: 63px;
+  }
+  .footerWrapper > p {
+    width: 86.59px;
+    padding-top: 14px;
+    margin-bottom: 0;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  /* Location */
+  .main {
+  }
+
+  /* Location slider */
+
+  .locationSlider {
+    position: relative;
+    display: flex;
+    width: 335px;
+    height: fit-content;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  .locationSliderImage {
+    display: flex;
+    border-radius: 10px;
+    object-fit: cover;
+    width: 335px;
+    height: 255px;
+  }
+  .leftArrow {
+    position: absolute;
+    left: 0;
+    top: 45%;
+    width: 24px;
+    height: 24px;
+    border: none;
+    background: cyan;
+    justify-content: center;
+  }
+  .rightArrow {
+    position: absolute;
+    top: 45%;
+    right: 0;
+    width: 24px;
+    height: 24px;
+    border: none;
+    background: red;
+    justify-content: center;
+  }
+  .locationSliderNumber {
+    display: flex;
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    text-align: center;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 142.6%;
+    color: #ffffff;
+    background-color: blueviolet;
+  }
+
+  /* Location details */
+
+  .locationDetailsWrapper {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    margin-top: 15px;
+    min-width: 335px;
+    width: 80%;
+    min-height: 150px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  .locationTitleWrapper {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    padding-bottom: 20px;
+  }
+  .locationTitle {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 142.6%;
+    color: #ff6060;
+  }
+  .locationSubtitle {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 142.6%;
+    color: #000000;
+  }
+  .hostWrapper {
+    display: flex;
+    position: absolute;
+    top: 58%;
+    right: 0%;
+    width: fit-content;
+    height: fit-content;
+    text-align: right;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .hostWrapper > img {
+    width: 32px;
+    height: 32px;
+    background: #c4c4c4;
+    border-radius: 50%;
+  }
+  .hostName {
+    width: min-content;
+    height: fit-content;
+    font-size: 12px;
+    line-height: 142.6%;
+    color: #ff6060;
+    font-weight: 500;
+  }
+  .locationTags {
+    display: flex;
+    position: absolute;
+    top: 35%;
+    height: fit-content;
+    flex-wrap: wrap;
+    flex-direction: row;
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 142.6%;
+    width: 100%;
+  }
+  .locationTags > div {
+    display: flex;
+    min-width: 84px;
+    height: 18px;
+    border-radius: 5px;
+    color: #ffffff;
+    background: #ff6060;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-right: 10px;
+    margin-bottom: 7px;
+  }
+  .locationTag > p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 3px 20px 2px 20px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 142.6%;
+  }
+  .locationRating {
+    display: flex;
+    position: absolute;
+    top: 63%;
+    width: fit-content;
+    padding-bottom: 7px;
+    column-gap: 12px;
+    justify-content: flex-end;
+    margin-top: 10px;
+  }
+  .locationRating > img {
+    width: 18px;
+    height: 18px;
+  }
+
+  /* General button styling */
+  .galleryCollapseButton {
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    padding: 10px 20px 10px 10px;
+  }
+
+  /* Image within the button */
+  .galleryCollapseButton > img {
+    height: 16px;
+    width: 16px;
+    transition: transform 0.5s ease;
+  }
+
+  /* Rotate the image when the button is clicked */
+  .galleryCollapseButton > img.rotated {
+    transform: rotate(-180deg);
+  }
+
+  /* Hide the text initially */
+  .galleryCollapseDescriptionText,
+  .galleryCollapseEquipmentText {
+    display: none;
+    padding: 20px;
+    width: 90%;
+    background: rgba(247, 247, 247, 0.45);
+    border-radius: 0 0 5px 5px;
+    margin-top: 0; /* Adjusted to match the design */
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 26px;
+    color: #000000;
+  }
+
+  .galleryCollapseEquipmentText.show > p {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 26px;
+    color: #000000;
+  }
+
+  /* Show the text when the section is expanded */
+  .galleryCollapseDescriptionText.show,
+  .galleryCollapseEquipmentText.show {
+    display: block;
+  }
+
+  /* Wrapper for the collapsible sections */
+  .galleryCollapseWrapper {
+    display: flex;
+    flex-direction: column;
+    left: 20px;
+    top: 20px;
+    gap: 20px;
+  }
+
+  /* Description section styling */
+  .galleryCollapseDescription,
+  .galleryCollapseEquipment {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    background: rgba(247, 247, 247, 0.45);
+    border-radius: 10px 10px 5px 5px;
+    position: relative;
+    padding-left: 20px;
+  }
+  .galleryCollapseEquipment {
+    padding-left: 0px;
+  }
+  /* Section header styling */
+  .galleryCollapseSectionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+    background: #ff6060;
+    border-radius: 5px;
+    z-index: 1;
+  }
+
+  /* Section title styling */
+  .galleryCollapseSectionHeader h2 {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 26px;
+    color: #ffffff;
+    margin: 0;
+    padding: 10px 20px 10px 10px;
+  }
+
+  /* Button positioning within the section header */
+  .galleryCollapseSectionHeader .galleryCollapseButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* ********************About***************** */
+
+  .about {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1240px;
+    margin: 0px 100px 38px 100px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* banner img */
+  .aboutImg {
+    width: 89%;
+    height: 111px;
+    display: flex;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    margin-bottom: 19px;
+    overflow: hidden;
+  }
+
+  .aboutImg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* opacity amount */
+    border-radius: 10px;
+  }
+
+  /* General button styling */
+  .aboutCollapseButton {
+    height: 16px;
+    width: 16px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+  }
+
+  /* Image within the button */
+  .aboutCollapseButton > img {
+    height: 16px;
+    width: 16px;
+    transition: transform 0.5s ease;
+  }
+
+  /* Rotate the image when the button is clicked */
+  .aboutCollapseButton > img.rotated {
+    transform: rotate(-180deg);
+  }
+
+  /* Hide the text initially */
+  .aboutCollapseText {
+    display: none;
+    padding: 20px;
+    width: 90%;
+    background: rgba(247, 247, 247, 0.45);
+    border-radius: 0 0 5px 5px;
+    margin-top: 0; /* Adjusted to match the design */
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 26px;
+    color: #000000;
+  }
+
+  /* Show the text when the section is expanded */
+  .aboutCollapseText.show {
+    display: block;
+  }
+
+  /* Wrapper for the collapsible sections */
+  .aboutCollapseWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 89%;
+  }
+
+  /* Section styling */
+  .aboutCollapseSection {
+    max-width: 1023px;
+    position: relative;
+    border-radius: 5px;
+    background: rgba(247, 247, 247, 0.45);
+    overflow: hidden;
+  }
+
+  /* Section header styling */
+  .aboutCollapseSection > h2 {
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 26px;
+    color: #ffffff;
+    margin: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  /*             errorPage            */
+
+  .errorPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 89px;
+  }
+  .errorPage > h1 {
+    display: flex;
+    margin: 0px 321.5px 139px 321.5px;
+    font-weight: 700;
+    font-size: 96px;
+    color: #ff6060;
+  }
+  .errorPage > h2 {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 142.6%;
+    color: #ff6060;
+    margin-bottom: 139px;
+    margin-right: 57.5px;
+    margin-left: 57.5px;
+    width: 260px;
+  }
+  .errorPage > a {
+    text-decoration-line: underline;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 142.6%;
+    color: #000000;
+    margin-bottom: 139px;
+  }
 }
