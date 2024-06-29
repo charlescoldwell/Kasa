@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import CollapseButton from '../../assets/images/collapseButton.svg';
-import './style.css'; // Import the CSS file
 
 export default function AboutCollapse() {
   // State to manage the visibility of the sections

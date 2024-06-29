@@ -14,7 +14,6 @@ export default function Location() {
       <LocationSlider />
       <LocationDetails />
       <LocationCollapses />
-      <p>DEBUGGING: Location ID: {locationId}</p>
     </div>
   );
 }

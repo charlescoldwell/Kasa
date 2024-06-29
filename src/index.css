@@ -186,7 +186,6 @@
   width: 46.68px;
   height: 79.2px;
   border: none;
-  background: cyan;
 }
 .rightArrow {
   position: absolute;
@@ -195,7 +194,6 @@
   width: 46.68px;
   height: 79.2px;
   border: none;
-  background: red;
 }
 .locationSliderNumber {
   display: flex;
@@ -207,7 +205,6 @@
   font-size: 18px;
   line-height: 142.6%;
   color: #ffffff;
-  background-color: blueviolet;
 }
 
 /* Location details */
@@ -490,7 +487,6 @@
 
 /* Section styling */
 .aboutCollapseSection {
-  height: ;
   max-width: 1023px;
   position: relative;
   border-radius: 5px;
@@ -512,6 +508,15 @@
   padding: 10px 20px;
   background: #ff6060;
   border-radius: 5px 5px 0 0;
+}
+.aboutCollapseText {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+}
+
+.show {
+  max-height: 200px; /* Adjust as needed */
 }
 
 /*             errorPage            */
@@ -550,7 +555,8 @@
 
 @media (max-width: 1023px) {
   .main {
-    margin-bottom: 2.131%;
+    margin-bottom: 27px;
+    width: 90%;
   }
 
   /* header */
@@ -567,12 +573,12 @@
   }
   .headerWrapper__mobileLogoWrapper {
     display: flex;
-    padding-left: 20px;
+    padding-left: 5%;
     justify-content: center;
     align-items: flex-end;
   }
   .headerWrapper__navWrapper {
-    padding-right: 20px;
+    padding-right: 5%;
   }
   .headerWrapper__navWrapper > a {
     padding-left: 26px;
@@ -634,32 +640,35 @@
   }
   .homeGallery__gallery {
     display: grid;
-    grid-template-columns: repeat(1, 100%);
-    grid-template-rows: repeat(3, 255px);
-    grid-column-gap: 0px;
-    grid-row-gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(335px, 1fr));
+    grid-auto-rows: 255px; /* or use minmax() if you want flexible row heights */
+    grid-gap: 20px;
     width: 100%;
-    height: 805px;
-    overflow: scroll;
-    scrollbar-width: none;
-    padding: 0px 0px 0px 0px;
+    padding: 0;
     background: #ffffff;
     border-radius: 10px;
+    grid-template-rows: none;
   }
+
   .card {
     display: flex;
     position: relative;
-    height: 255px;
-    width: 335px;
+    height: 100%; /* Make it take the full height of the grid cell */
+    width: 100%; /* Make it take the full width of the grid cell */
     border-radius: 10px;
+    overflow: hidden;
   }
+
   .card > a > img {
     position: absolute;
-    height: 255px;
-    width: 335px;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
     object-fit: cover;
     border-radius: 10px;
   }
+
   .card > a > h2 {
     display: flex;
     position: absolute;
@@ -667,11 +676,10 @@
     line-height: 142.6%;
     align-items: flex-end;
     color: #ffffff;
-    bottom: 0%;
-    left: 0%;
-    padding: 0px 0px 20px 20px;
+    bottom: 0;
+    left: 0;
+    padding: 0 0 20px 20px;
     font-weight: 700;
-    font-size: 18px;
     text-decoration: none;
   }
 
@@ -703,24 +711,20 @@
   }
 
   /* Location */
-  .main {
-  }
 
   /* Location slider */
 
   .locationSlider {
     position: relative;
     display: flex;
-    width: 335px;
+    width: 100%;
     height: fit-content;
-    margin-right: 20px;
-    margin-left: 20px;
   }
   .locationSliderImage {
     display: flex;
     border-radius: 10px;
     object-fit: cover;
-    width: 335px;
+    width: 100%;
     height: 255px;
   }
   .leftArrow {
@@ -730,7 +734,7 @@
     width: 24px;
     height: 24px;
     border: none;
-    background: cyan;
+    background: none;
     justify-content: center;
   }
   .rightArrow {
@@ -740,7 +744,7 @@
     width: 24px;
     height: 24px;
     border: none;
-    background: red;
+    background: none;
     justify-content: center;
   }
   .locationSliderNumber {
@@ -753,7 +757,6 @@
     font-size: 18px;
     line-height: 142.6%;
     color: #ffffff;
-    background-color: blueviolet;
   }
 
   /* Location details */
@@ -764,12 +767,10 @@
     flex-direction: row;
     margin-top: 15px;
     min-width: 335px;
-    width: 80%;
+    width: 100%;
     min-height: 150px;
     flex-wrap: wrap;
     margin-bottom: 24px;
-    margin-right: 20px;
-    margin-left: 20px;
   }
   .locationTitleWrapper {
     position: relative;
@@ -896,7 +897,7 @@
   .galleryCollapseEquipmentText {
     display: none;
     padding: 20px;
-    width: 90%;
+    width: 100%;
     background: rgba(247, 247, 247, 0.45);
     border-radius: 0 0 5px 5px;
     margin-top: 0; /* Adjusted to match the design */
@@ -917,6 +918,7 @@
   .galleryCollapseDescriptionText.show,
   .galleryCollapseEquipmentText.show {
     display: block;
+    width: 92%;
   }
 
   /* Wrapper for the collapsible sections */
@@ -933,11 +935,10 @@
   .galleryCollapseEquipment {
     display: flex;
     flex-direction: column;
-    width: 90%;
+    width: 100%;
     background: rgba(247, 247, 247, 0.45);
     border-radius: 10px 10px 5px 5px;
     position: relative;
-    padding-left: 20px;
   }
   .galleryCollapseEquipment {
     padding-left: 0px;
