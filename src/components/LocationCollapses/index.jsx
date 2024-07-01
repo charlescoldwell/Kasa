@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import Logements from '../../assets/json/logements.json';
-import CollapseItem from './CollapseItem'; // Import the CSS file
+import CollapseItem from './CollapseItem';
 
 export default function LocationCollapses() {
   const { locationId } = useParams();

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import CollapseButton from '../../assets/images/collapseButton.svg';
 
+import CollapseItem from '../LocationCollapses/CollapseItem';
+
 export default function AboutCollapse() {
   // State to manage the visibility of the sections
   const [visibleSections, setVisibleSections] = useState({
@@ -20,6 +22,7 @@ export default function AboutCollapse() {
 
   return (
     <div className="aboutCollapseWrapper">
+      <CollapseItem title="titre" description="description" />
       <div className="aboutCollapseSection">
         <h2>
           Fiabilité
