@@ -13,13 +13,13 @@ export default function LocationSlider() {
     (logement) => logement.id === locationId
   );
 
-  // Ensure the current location exists
+  // Make sure pictures exist
   const pictures = currentLocation ? currentLocation.pictures : [];
 
-  // Determine button display state
+  // Hide button if only one image in set
   const buttonDisplay = pictures.length === 1 ? 'none' : 'flex';
 
-  // Ensure count wraps correctly based on the length of pictures array
+  // Handle previous and next click while wrapping it in length of pictures array
   const handlePrevClick = () => {
     setCount(
       (prevCount) => (prevCount - 1 + pictures.length) % pictures.length

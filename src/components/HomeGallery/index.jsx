@@ -9,7 +9,6 @@ export default function HomeGallery() {
         className="homeGallery__banner"
         style={{ backgroundImage: `url(${homeGallery__banner})` }}
       >
-        {/* <img src={homeGallery__banner} alt="Chez vous, partout et ailleurs" /> */}
         <h1 className="homeGallery__banner_title">
           Chez vous, partout et ailleurs
         </h1>
