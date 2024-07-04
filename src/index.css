@@ -1,7 +1,7 @@
 * {
+  font-family: Montserrat;
   margin: 0;
   padding: 0;
-
   font-style: normal;
   text-decoration: none;
 }
@@ -331,7 +331,6 @@
   background: rgba(247, 247, 247, 0.45);
   border-radius: 0 0 5px 5px;
   margin-top: 0; /* Adjusted to match the design */
-
   font-weight: 400;
   font-size: 18px;
   line-height: 26px;
@@ -698,6 +697,7 @@
     min-width: 335px;
     width: 100%;
     min-height: 150px;
+    margin-bottom: 1%;
   }
   .locationTitleWrapper {
     position: relative;
@@ -708,6 +708,7 @@
     font-size: 18px;
   }
   .locationSubtitle {
+    display: flex;
     font-size: 14px;
   }
   .hostWrapper {
@@ -716,7 +717,7 @@
     right: 0%;
     width: fit-content;
     height: fit-content;
-    margin-top: 10px;
+    margin-top: 1%;
   }
   .hostWrapper > img {
     width: 32px;
@@ -734,6 +735,7 @@
     flex-wrap: wrap;
     flex-direction: row;
     width: 100%;
+    margin-top: 1%;
   }
   .locationTags > div {
     min-width: 84px;
@@ -750,7 +752,7 @@
     top: 63%;
     width: fit-content;
     column-gap: 12px;
-    margin-top: 10px;
+    margin-top: 1%;
   }
   .locationRating > img {
     width: 18px;

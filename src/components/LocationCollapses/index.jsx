@@ -13,7 +13,6 @@ export default function LocationCollapses() {
 
   // Send to error page if ID is wrong
   const navigate = useNavigate();
-
   useEffect(() => {
     if (!currentLocation) {
       return navigate('/Error');
@@ -23,14 +22,14 @@ export default function LocationCollapses() {
   return currentLocation ? (
     <div className="galleryCollapseWrapper">
       <CollapseItem
-        className={"galleryCollapseDescription"}
+        className={'galleryCollapseDescription'}
         style={{ marginRight: '6.129%' }}
         title={'Description'}
         description={currentLocation.description}
       />
 
-      <CollapseItem      
-        className={"galleryCollapseDescription"}
+      <CollapseItem
+        className={'galleryCollapseDescription'}
         title={'Équipements'}
         description={currentLocation.equipments.map((item, index) => (
           <p key={index}>{item}</p>

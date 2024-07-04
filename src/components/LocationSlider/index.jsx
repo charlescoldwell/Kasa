@@ -13,7 +13,7 @@ export default function LocationSlider() {
     (logement) => logement.id === locationId
   );
 
-  // Make sure pictures exist
+  // Make sure pictures exist if so then store them
   const pictures = currentLocation ? currentLocation.pictures : [];
 
   // Hide button if only one image in set

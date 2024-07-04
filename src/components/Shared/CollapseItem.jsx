@@ -23,13 +23,13 @@ export default function CollapseItem({ title, description, style, className }) {
           />
         </button>
       </div>
-      <p
+      <div
         className={`galleryCollapseDescriptionText ${
           isDescriptionVisible ? 'show' : ''
         }`}
       >
         {description}
-      </p>
+      </div>
     </div>
   );
 }

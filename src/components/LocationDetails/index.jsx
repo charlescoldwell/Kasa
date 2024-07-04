@@ -12,10 +12,6 @@ export default function LocationDetails() {
     (logement) => logement.id === locationId
   );
 
-  if (!currentLocation) {
-    return <div>Location not found</div>;
-  }
-
   let ratingNumber = Number(currentLocation.rating);
 
   return (
