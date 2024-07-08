@@ -15,9 +15,10 @@ export default function LocationCollapses() {
   const navigate = useNavigate();
   useEffect(() => {
     if (!currentLocation) {
-      return navigate('/Error');
+      console.log(`Location with ID ${locationId} not found`);
+      navigate('/Error');
     }
-  }, [currentLocation, navigate]);
+  }, [currentLocation, navigate, locationId]);
 
   return currentLocation ? (
     <div className="galleryCollapseWrapper">

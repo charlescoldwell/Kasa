@@ -1,5 +1,5 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 import Logements from '../../assets/json/logements.json';
 import starActive from '../../assets/images/starActive.svg';
 import starInactive from '../../assets/images/starInactive.svg';
@@ -12,7 +12,22 @@ export default function LocationDetails() {
     (logement) => logement.id === locationId
   );
 
-  let ratingNumber = Number(currentLocation.rating);
+  // Send to error page if ID is wrong
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!currentLocation) {
+      console.log(`Location with ID ${locationId} not found`);
+      navigate('/Error');
+    }
+  }, [currentLocation, navigate, locationId]);
+
+  if (!currentLocation) {
+    console.log(`No currentLocation found for ID: ${locationId}`);
+    return null;
+  }
+
+  const ratingNumber = Number(currentLocation.rating);
 
   return (
     <div className="locationDetailsWrapper">
