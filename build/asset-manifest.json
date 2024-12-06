@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/Kasa/static/css/main.8ae128e9.css",
+    "main.js": "/Kasa/static/js/main.2b637637.js",
+    "static/media/aboutImg.png": "/Kasa/static/media/aboutImg.640955dab8c7bff25514.png",
+    "static/media/main__banner.png": "/Kasa/static/media/main__banner.19221376a0aa2549c135.png",
+    "static/media/starActive.svg": "/Kasa/static/media/starActive.30b8963e66a47777ef47296f505567be.svg",
+    "static/media/starInactive.svg": "/Kasa/static/media/starInactive.68fd8a1ead5375bd59bb6ae0b633ffd3.svg",
+    "static/media/logoADesktop.svg": "/Kasa/static/media/logoADesktop.ed59032dc7cc7099b16bd842df704c67.svg",
+    "static/media/logoAmobile.svg": "/Kasa/static/media/logoAmobile.d1f91e201ba45a231091785631b15e4f.svg",
+    "static/media/logoADesktopFooter.svg": "/Kasa/static/media/logoADesktopFooter.1321a0adcd881116ef00061b7529dac0.svg",
+    "static/media/logoSmobile.svg": "/Kasa/static/media/logoSmobile.1be46533f119a8ffc9bd96d5e594295d.svg",
+    "static/media/logoSDesktop.svg": "/Kasa/static/media/logoSDesktop.f53dbcbae38b3431f226b19375642452.svg",
+    "static/media/logoSDesktopFooter.svg": "/Kasa/static/media/logoSDesktopFooter.0e325d4f1ed730dd1b3a4dde57b1c42e.svg",
+    "static/media/collapseButton.svg": "/Kasa/static/media/collapseButton.3c682982a2eb7c406dbaddc55cd45ed1.svg",
+    "index.html": "/Kasa/index.html",
+    "static/media/logoMaisonmobile.svg": "/Kasa/static/media/logoMaisonmobile.09d5b000897561152ce4d4be6dd68a5a.svg",
+    "static/media/logoMaisonDesktop.svg": "/Kasa/static/media/logoMaisonDesktop.dcfe93f3f39944259db6ee878f34c011.svg",
+    "static/media/logoMaisonDesktopFooter.svg": "/Kasa/static/media/logoMaisonDesktopFooter.64d18e4736443a4fe6cbdd59334c878d.svg",
+    "static/media/logoKDesktopFooter.svg": "/Kasa/static/media/logoKDesktopFooter.4ec244db1a28e2c53fabdbf48d5a781e.svg",
+    "static/media/logoKmobile.svg": "/Kasa/static/media/logoKmobile.98f51768d61ec360fd64a5307c899748.svg",
+    "static/media/logoKDesktop.svg": "/Kasa/static/media/logoKDesktop.f56a126c576c49ce151898c2784ec536.svg",
+    "static/media/rightArrow.svg": "/Kasa/static/media/rightArrow.88153a5d119c2744ffe34dca1ef843df.svg",
+    "static/media/leftArrow.svg": "/Kasa/static/media/leftArrow.19918a1634b1441a25ae0b50e6b1f85b.svg",
+    "main.8ae128e9.css.map": "/Kasa/static/css/main.8ae128e9.css.map",
+    "main.2b637637.js.map": "/Kasa/static/js/main.2b637637.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8ae128e9.css",
+    "static/js/main.2b637637.js"
+  ]
+}
